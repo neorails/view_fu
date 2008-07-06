@@ -42,14 +42,36 @@ Haml allows you to pash a hash of attributes. ViewFu assists this by providing a
 
 Stylesheets
 =======
+ViewFu allows you to add a dynamic stylesheets collection to the top of your page. If you have any partials that depend on a stylesheet, they just need to call add_stylesheet(path) and the styles will be available on the page. 
 
+You'll just need to add a call *stylesheets* somewhere your page header. 
+
+stylesheets
+writes the stylesheet collection to html
+
+stylesheet
+alias around stylesheet_link_tag
+
+stylesheet_folder(path) 
+lets you include a recursive folder of stylesheets
+
+page_stylesheets
+output stylesheets specific to a page
+
+add_stylesheet(path)
+adds a stylesheet to the collection to be included on the page
+
+ignore_stylesheet(path)
+removes a stylesheet from the collection to be included on the page
+
+See lib/stylesheet/README for more details
 
 
 Javascripts
 =======
 ViewFu allows you to add a dynamic javascript collection to the top(or bottom) of your page. Now, if you have a partial that depends on a javascript library, you can just include it via add_javascript(path) and it will appear on the top of your page.
 
-You'll just need add a call to javascripts to your layout and the javascripts you included an all your partials will appear.
+You'll just need add a call to *javascripts* to your layout and the javascripts you included an all your partials will appear.
 
 javascripts
 writes the javascript collection to html
@@ -63,10 +85,10 @@ lets you include a recursive folder of javascripts
 page_javascripts
 output javascripts specific to a page
 
-add_javascript(javascript)
+add_javascript(path)
 adds a javascript to the collection to be included on the page
 
-ignore_javascript(javascript)
+ignore_javascript(path)
 removes a javascript from the collection to be included on the page
 
 See lib/javascripter/README for more details
