@@ -7,7 +7,7 @@ module Javascripter
     
       javascript_include_tag(*input)
     end
-  
+    
     # Override this if needed
     def javascripts(options={})
       [
