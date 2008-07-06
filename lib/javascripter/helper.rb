@@ -19,13 +19,13 @@ module Javascripter
     # returns an entire directory of javascripts recursively
     def javascript_folder(path)
       if use_cache? 
-        return javascript "min/#{path}.js"
+        return javascript("min/#{path}.js")
       else
         result = []
         Dir["#{Rails.public_path}/javascripts/#{path}/**/*.js"].each do |item|
           result << item.gsub("#{Rails.public_path}/javascripts/", "")
         end
-        return javascript result
+        return javascript(result)
       end
     end
   

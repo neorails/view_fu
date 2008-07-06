@@ -14,13 +14,13 @@ module Styler
     # returns an entire directory of stylesheets recursively
     def stylesheet_folder(path)
       if use_cache? # or browser_is? :ie
-        return stylesheet "min/#{path}.css"
+        return stylesheet("min/#{path}.css")
       else
         result = []
         Dir["#{Rails.public_path}/stylesheets/#{path}/**/*.css"].each do |css|
           result << css.gsub("#{Rails.public_path}/stylesheets/", "")
         end
-        return stylesheet result
+        return stylesheet(result)
       end
     end
   
