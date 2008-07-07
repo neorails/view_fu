@@ -4,6 +4,15 @@ ViewFu
 ViewFu is a Rails plugin that provides all the miscellaneous View tasks. It's a combination of the functionality of Styler, Javascripter, and Headline (from Patrick Crowley, the.railsi.st) - along with additional tweaks such as providing commonly used View Helpers Methods.
 
 
+Maintainer Info
+======
+
+Tyler Crocker
+NeoRails.com
+
+Looking for *the one* awesome rails developer to add to your project? I may be available to help out. Contact me at neorails@gmail.com. 
+
+
 ViewFu HTML Helpers
 =======
 ViewFu provides helpers for commonly used html elements
