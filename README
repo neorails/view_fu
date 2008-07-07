@@ -135,4 +135,11 @@ meta_description(val)
 set the page meta description
 
 
+More Plugins
+======
+
+If you like ViewFu, you'll *love* FormFu. It provides a beautiful way to generate tableless Rails html forms. Works just like form_for, except it'll generate the entire XHTML (label, wrapper, validation message, etc). 
+https://github.com/neorails/form_fu
+
+
 Copyright (c) 2008 NeoRails.com, released under the MIT license
