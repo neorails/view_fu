@@ -11,6 +11,11 @@ module ViewFu
       "<hr />"
     end
     
+    # Writes a nonbreaking space
+    def nbsp
+      "&nbsp;"
+    end
+    
     # Writes an hr space tag
     def space
       "<hr class='space' />"
@@ -30,6 +35,10 @@ module ViewFu
       end
     end
   
+    def current_year
+      Time.now.strftime("%Y")
+    end
+
     # Writes a clear div tag
     def clear(direction = nil)
       clear_tag(:div, direction)
@@ -70,6 +79,7 @@ module ViewFu
         {}
       end
     end
+    alias :hidden_if :hide_if
   
     # Return a hidden attribute hash if a condition evaluates to false
     def hide_unless(condition)
@@ -79,6 +89,8 @@ module ViewFu
         {}
       end
     end
+    alias :hidden_unless :hide_if
+    
   
     # Wrap a delete link
     def delete_link(*args)
