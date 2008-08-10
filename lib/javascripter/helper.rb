@@ -11,6 +11,7 @@ module Javascripter
     # Override this if needed
     def javascripts(options={})
       [
+        javascript(AssetTagHelper.JAVASCRIPT_DEFAULT_SOURCES),
         page_javascripts(options),
         javascript("application")
       ].join("\n")
