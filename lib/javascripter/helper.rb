@@ -11,8 +11,13 @@ module Javascripter
     # Override this if needed
     def javascripts(options={})
       [
-        javascript(AssetTagHelper.JAVASCRIPT_DEFAULT_SOURCES),
+        # include the default sources (minus application.js)
+        javascript(ActionView::Helpers::AssetTagHelper.JAVASCRIPT_DEFAULT_SOURCES),
+
+        # include the dynamic page javascripts
         page_javascripts(options),
+
+        # application.js always needs to be at the end
         javascript("application")
       ].join("\n")
     end
