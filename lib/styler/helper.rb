@@ -5,12 +5,12 @@ module Styler
       input = [input].flatten
       stylesheet_link_tag(*input)
     end
-    
+
     # override this in your application_helper to clean it up
     def stylesheets(options = {})
-      [stylesheet(:defaults), page_stylesheets(options)].join("\n")
+      [stylesheet(:all), page_stylesheets(options)].join("\n")
     end
-  
+    
     # returns an entire directory of stylesheets recursively
     def stylesheet_folder(path)
       if use_cache? # or browser_is? :ie
