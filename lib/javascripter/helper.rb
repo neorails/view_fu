@@ -12,7 +12,7 @@ module Javascripter
     def javascripts(options={})
       [
         # include the default sources (minus application.js)
-        javascript(ActionView::Helpers::AssetTagHelper.JAVASCRIPT_DEFAULT_SOURCES),
+        javascript(ActionView::Helpers::AssetTagHelper::JAVASCRIPT_DEFAULT_SOURCES),
 
         # include the dynamic page javascripts
         page_javascripts(options),
