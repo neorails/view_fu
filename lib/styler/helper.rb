@@ -8,7 +8,7 @@ module Styler
 
     # override this in your application_helper to clean it up
     def stylesheets(options = {})
-      [stylesheet(:all), page_stylesheets(options)].join("\n")
+      [stylesheet("application"), page_stylesheets(options)].join("\n")
     end
     
     # returns an entire directory of stylesheets recursively
