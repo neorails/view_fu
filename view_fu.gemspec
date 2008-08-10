@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'view_fu'
-  s.version = '0.9'
+  s.version = '0.9.1'
   s.date = '2008-08-10'
   
   s.summary = "Lots of handy Rails View helpers. Includes the functionality of Headliner, Styler, and Javascripter"

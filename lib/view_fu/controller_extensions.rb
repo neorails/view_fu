@@ -4,5 +4,10 @@ module ViewFu
     def helpers
       self.class.helpers
     end
+    
+    # checks to see if app is in production mode
+    def production?
+      Rails.env == "production"
+    end
   end
 end
