@@ -89,7 +89,7 @@ module ViewFu
         {}
       end
     end
-    alias :hidden_unless :hide_if
+    alias :hidden_unless :hide_unless
     
   
     # Wrap a delete link
