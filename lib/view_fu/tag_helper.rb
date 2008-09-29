@@ -80,6 +80,7 @@ module ViewFu
       end
     end
     alias :hidden_if :hide_if
+    alias :show_unless :hide_if
   
     # Return a hidden attribute hash if a condition evaluates to false
     def hide_unless(condition)
@@ -90,7 +91,7 @@ module ViewFu
       end
     end
     alias :hidden_unless :hide_unless
-    
+    alias :show_if :hide_unless 
   
     # Wrap a delete link
     def delete_link(*args)
