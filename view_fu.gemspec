@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'view_fu'
-  s.version = '0.9.3'
-  s.date = '2008-08-10'
+  s.version = '0.9.5'
+  s.date = '2008-11-15'
   
   s.summary = "Lots of handy Rails View helpers. Includes the functionality of Headliner, Styler, and Javascripter"
   s.description = "ViewFu is a Rails plugin that provides all the miscellaneous View tasks. It's a combination of the functionality of Styler, Javascripter, and Headline (from Patrick Crowley, the.railsi.st) - along with additional tweaks such as providing commonly used View Helpers Methods."

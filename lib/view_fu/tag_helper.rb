@@ -1,6 +1,6 @@
 module ViewFu
   module TagHelper
-    
+
     # Writes a br tag
     def br
       "<br />"
@@ -22,8 +22,10 @@ module ViewFu
     end
     
     # Writes an anchor tag
-    def anchor(anchor_name)
-      "<a name='#{anchor_name}'></a>"
+    def anchor(anchor_name, options = {})
+      content_tag(:a, {:name => anchor_name}.reverse_merge(options)) do
+        ""
+      end
     end
     
     # Writes a clear tag
@@ -69,7 +71,18 @@ module ViewFu
       link_to(image_tag(image_path, :class => "vert-middle", :style => "#{vert_style}"), url, options)+"&nbsp;"+
       link_to(label, url, options)
     end
+    
+    def add_class_if(css_class, condition)
+      if condition
+        {:class => css_class}
+      else
+        {}
+      end
+    end
 
+    def add_class_unless(css_class, condition)
+      add_class_if(css_class, !condition)
+    end
   
     # Return a hidden attribute hash if a condition evaluates to true
     def hide_if(condition)
@@ -130,7 +143,7 @@ module ViewFu
   
     # Display will_paginate paging links
     def paging(page_data, style = :sabros)
-      return unless page_data.class == WillPaginate::Collection    
+      return unless page_data.is_a? WillPaginate::Collection
       will_paginate(page_data, :class => "pagination #{style}", :inner_window => 3)
     end
 
@@ -143,5 +156,11 @@ module ViewFu
     def pixel(options = {})
       image_tag "pixel.png", options
     end
+    
+    # check to see if an index is the first item in a collection
+    def is_first(i)
+      i.to_i.zero? ? {:class => "first"} : {}
+    end
+    
   end
 end
